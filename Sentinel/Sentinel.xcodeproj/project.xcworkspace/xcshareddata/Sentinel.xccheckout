@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>ABB4E1A6-F1B3-48AF-9971-42DEDE2887AD</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Sentinel</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>C991A0FB-EF0A-4A49-9E9E-0668F151A806</key>
+		<string>https://github.com/GeoscienceAustralia/iSentinel.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Sentinel/Sentinel.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>C991A0FB-EF0A-4A49-9E9E-0668F151A806</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/GeoscienceAustralia/iSentinel.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>C991A0FB-EF0A-4A49-9E9E-0668F151A806</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>C991A0FB-EF0A-4A49-9E9E-0668F151A806</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iSentinel</string>
+		</dict>
+	</array>
+</dict>
+</plist>

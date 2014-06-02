@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AvhrrLastPasses-1400</key>
+	<string>ModisFire-Purple.png</string>
+	<key>Avhrr00to12Hours-1401</key>
+	<string>ModisFire-Red.png</string>
+	<key>Avhrr12to24Hours-1402</key>
+	<string>ModisFire-Orange.png</string>
+	<key>Avhrr24to48Hours-1403</key>
+	<string>ModisFire-Yellow.png</string>
+	<key>Avhrr48to72Hours-1404</key>
+	<string>ModisFire-Grey.png</string>
+	<key>ModisLastPasses-1600</key>
+	<string>ModisFire-Purple.png</string>
+	<key>Modis00to12Hours-1601</key>
+	<string>ModisFire-Red.png</string>
+	<key>Modis12to24Hours-1602</key>
+	<string>ModisFire-Orange.png</string>
+	<key>Modis24to48Hours-1603</key>
+	<string>ModisFire-Yellow.png</string>
+	<key>Modis48to72Hours-1604</key>
+	<string>ModisFire-Grey.png</string>
+</dict>
+</plist>

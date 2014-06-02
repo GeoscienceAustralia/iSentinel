@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>time</key>
+	<string>esri:datetime</string>
+	<key>temp</key>
+	<string>esri:temp_k</string>
+	<key>source</key>
+	<string>esri:instrument</string>
+	<key>latitude</key>
+	<string>esri:latitude</string>
+	<key>longitude</key>
+	<string>esri:longitude</string>
+	<key>power</key>
+	<string>esri:power</string>
+	<key>confidence</key>
+	<string>esri:confidence</string>
+</dict>
+</plist>

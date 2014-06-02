@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Most Recent</key>
+	<string>ModisLastPasses-1600</string>
+	<key>0-12 Hours</key>
+	<string>Modis00to12Hours-1601</string>
+	<key>12-24 Hours</key>
+	<string>Modis12to24Hours-1602</string>
+	<key>24-48 Hours</key>
+	<string>Modis24to48Hours-1603</string>
+	<key>48-72 Hours</key>
+	<string>Modis48to72Hours-1604</string>
+</dict>
+</plist>

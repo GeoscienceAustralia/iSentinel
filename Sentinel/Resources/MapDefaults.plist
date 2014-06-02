@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Layers</key>
+	<array>
+		<string>Roads</string>
+		<string>MainlandOutline</string>
+	</array>
+	<key>DetailThreshold</key>
+	<string>5.0</string>
+	<key>ViewDimension</key>
+	<string>4500000</string>
+	<key>Latitude</key>
+	<string>-26.0000</string>
+	<key>Longitude</key>
+	<string>134.0000</string>
+</dict>
+</plist>

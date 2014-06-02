@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>WFS</key>
+	<string>http://sentinel.ga.gov.au/wfsconnector/com.esri.wfs.Esrimap</string>
+	<key>WFS_BETA</key>
+	<string>http://sentinel-new.ga.gov.au/geoserver/sentinel/wfs</string>
+	<key>WMS</key>
+	<string>http://sentinel.ga.gov.au/wmsconnector/com.esri.wms.Esrimap</string>
+	<key>WMS_BETA</key>
+	<string>http://sentinel-new.ga.gov.au/geoserver/sentinel/wms</string>
+</dict>
+</plist>

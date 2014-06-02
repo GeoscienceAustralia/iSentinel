@@ -1,0 +1,827 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C93B3AE7190E003300AAB99F /* GeoserverXMLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C93B3AE6190E003300AAB99F /* GeoserverXMLHelper.m */; };
+		C93B3AEA190E042000AAB99F /* DefaultsWMS-Beta.plist in Resources */ = {isa = PBXBuildFile; fileRef = C93B3AE9190E042000AAB99F /* DefaultsWMS-Beta.plist */; };
+		C93B3AED190E044900AAB99F /* DefaultsWFS-Beta.plist in Resources */ = {isa = PBXBuildFile; fileRef = C93B3AEC190E044900AAB99F /* DefaultsWFS-Beta.plist */; };
+		C93B3AF1190E2D4C00AAB99F /* GASMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = C93B3AF0190E2D4C00AAB99F /* GASMapView.m */; };
+		C93B3AF3190E437000AAB99F /* GASToolbarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C93B3AF2190E437000AAB99F /* GASToolbarView.xib */; };
+		C93B3AF6190E479D00AAB99F /* GASToolbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C93B3AF5190E479D00AAB99F /* GASToolbarViewController.m */; };
+		C93B3AF9190E52CF00AAB99F /* HotspotFeatureNames.plist in Resources */ = {isa = PBXBuildFile; fileRef = C93B3AF8190E52CF00AAB99F /* HotspotFeatureNames.plist */; };
+		C93B3B5E190E7DE500AAB99F /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C93B3B4C190E7DE500AAB99F /* AFHTTPRequestOperation.m */; };
+		C93B3B5F190E7DE500AAB99F /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C93B3B4E190E7DE500AAB99F /* AFHTTPRequestOperationManager.m */; };
+		C93B3B60190E7DE500AAB99F /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C93B3B50190E7DE500AAB99F /* AFHTTPSessionManager.m */; };
+		C93B3B61190E7DE500AAB99F /* AFNetworkReachabilityManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C93B3B53190E7DE500AAB99F /* AFNetworkReachabilityManager.m */; };
+		C93B3B62190E7DE500AAB99F /* AFSecurityPolicy.m in Sources */ = {isa = PBXBuildFile; fileRef = C93B3B55190E7DE500AAB99F /* AFSecurityPolicy.m */; };
+		C93B3B63190E7DE500AAB99F /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C93B3B57190E7DE500AAB99F /* AFURLConnectionOperation.m */; };
+		C93B3B64190E7DE500AAB99F /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C93B3B59190E7DE500AAB99F /* AFURLRequestSerialization.m */; };
+		C93B3B65190E7DE500AAB99F /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C93B3B5B190E7DE500AAB99F /* AFURLResponseSerialization.m */; };
+		C93B3B66190E7DE500AAB99F /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C93B3B5D190E7DE500AAB99F /* AFURLSessionManager.m */; };
+		C9A952C61908BED20090415D /* GeoserverManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A952C51908BED20090415D /* GeoserverManager.m */; };
+		C9A952D41908BF020090415D /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A952C71908BF020090415D /* home.png */; };
+		C9A952D51908BF020090415D /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A952C81908BF020090415D /* home@2x.png */; };
+		C9A952D61908BF020090415D /* logo.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C9A952C91908BF020090415D /* logo.jpeg */; };
+		C9A952D71908BF020090415D /* ModisFire-Grey.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A952CA1908BF020090415D /* ModisFire-Grey.png */; };
+		C9A952D81908BF020090415D /* ModisFire-Orange.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A952CB1908BF020090415D /* ModisFire-Orange.png */; };
+		C9A952D91908BF020090415D /* ModisFire-Purple.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A952CC1908BF020090415D /* ModisFire-Purple.png */; };
+		C9A952DA1908BF020090415D /* ModisFire-Red.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A952CD1908BF020090415D /* ModisFire-Red.png */; };
+		C9A952DB1908BF020090415D /* ModisFire-Yellow.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A952CE1908BF020090415D /* ModisFire-Yellow.png */; };
+		C9A952DC1908BF020090415D /* navbar.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A952CF1908BF020090415D /* navbar.png */; };
+		C9A952DD1908BF020090415D /* navbar@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A952D01908BF020090415D /* navbar@2x.png */; };
+		C9A952DE1908BF020090415D /* refresh@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A952D11908BF020090415D /* refresh@2x.png */; };
+		C9A952DF1908BF020090415D /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A952D21908BF020090415D /* splash.png */; };
+		C9A952E01908BF020090415D /* splash@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A952D31908BF020090415D /* splash@2x.png */; };
+		C9A952E51908BF290090415D /* TBXML.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A952E21908BF290090415D /* TBXML.m */; };
+		C9A952E81908BF440090415D /* GeoServer.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9A952E71908BF440090415D /* GeoServer.plist */; };
+		C9A952EB1908BF540090415D /* NSURL+RPC.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A952EA1908BF540090415D /* NSURL+RPC.m */; };
+		C9A952EE1908BF620090415D /* DefaultsWFS.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9A952EC1908BF620090415D /* DefaultsWFS.plist */; };
+		C9A952EF1908BF620090415D /* DefaultsWMS.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9A952ED1908BF620090415D /* DefaultsWMS.plist */; };
+		C9A952F21908BF970090415D /* HotspotImages.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9A952F01908BF970090415D /* HotspotImages.plist */; };
+		C9A952F31908BF970090415D /* MapDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9A952F11908BF970090415D /* MapDefaults.plist */; };
+		C9A952F91908BFAC0090415D /* HotspotAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A952F51908BFAB0090415D /* HotspotAnnotation.m */; };
+		C9A952FA1908BFAC0090415D /* HotspotMetaDataView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A952F61908BFAB0090415D /* HotspotMetaDataView.xib */; };
+		C9A952FB1908BFAC0090415D /* HotspotMetaDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A952F81908BFAC0090415D /* HotspotMetaDataViewController.m */; };
+		C9A952FE1908D9C50090415D /* NSString+Functions.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A952FD1908D9C50090415D /* NSString+Functions.m */; };
+		C9A953021908E3E40090415D /* FeatureInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = C9A953011908E3E40090415D /* FeatureInfo.plist */; };
+		C9A953051908FB340090415D /* GASOverlay.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A953041908FB340090415D /* GASOverlay.m */; };
+		C9A95314190935360090415D /* GASOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A95313190935360090415D /* GASOverlayView.m */; };
+		C9A9533C190A40B50090415D /* TermsOfService.xib in Resources */ = {isa = PBXBuildFile; fileRef = C9A9533B190A40B50090415D /* TermsOfService.xib */; };
+		C9A9533F190A42C50090415D /* TermsOfServiceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A9533E190A42C50090415D /* TermsOfServiceViewController.m */; };
+		C9A95344190A8B5A0090415D /* GASHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A95343190A8B5A0090415D /* GASHelpers.m */; };
+		C9ABB93A190633F700F107B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9ABB939190633F700F107B4 /* Foundation.framework */; };
+		C9ABB93C190633F700F107B4 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9ABB93B190633F700F107B4 /* CoreGraphics.framework */; };
+		C9ABB93E190633F700F107B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9ABB93D190633F700F107B4 /* UIKit.framework */; };
+		C9ABB944190633F700F107B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9ABB942190633F700F107B4 /* InfoPlist.strings */; };
+		C9ABB946190633F700F107B4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = C9ABB945190633F700F107B4 /* main.m */; };
+		C9ABB94A190633F700F107B4 /* GASAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = C9ABB949190633F700F107B4 /* GASAppDelegate.m */; };
+		C9ABB94D190633F700F107B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9ABB94B190633F700F107B4 /* Main.storyboard */; };
+		C9ABB950190633F700F107B4 /* GASViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9ABB94F190633F700F107B4 /* GASViewController.m */; };
+		C9ABB952190633F700F107B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9ABB951190633F700F107B4 /* Images.xcassets */; };
+		C9ABB959190633F700F107B4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9ABB958190633F700F107B4 /* XCTest.framework */; };
+		C9ABB95A190633F700F107B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9ABB939190633F700F107B4 /* Foundation.framework */; };
+		C9ABB95B190633F700F107B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9ABB93D190633F700F107B4 /* UIKit.framework */; };
+		C9ABB963190633F700F107B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9ABB961190633F700F107B4 /* InfoPlist.strings */; };
+		C9ABB965190633F700F107B4 /* SentinelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9ABB964190633F700F107B4 /* SentinelTests.m */; };
+		C9ABB98C190635B000F107B4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9ABB98B190635B000F107B4 /* MapKit.framework */; };
+		C9ABB9CF1907807C00F107B4 /* GASHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9ABB9CE1907807C00F107B4 /* GASHomeViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C9ABB95C190633F700F107B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9ABB92E190633F700F107B4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9ABB935190633F700F107B4;
+			remoteInfo = Sentinel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		C93B3AE5190E003300AAB99F /* GeoserverXMLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeoserverXMLHelper.h; path = Sentinel/GeoserverXMLHelper.h; sourceTree = "<group>"; };
+		C93B3AE6190E003300AAB99F /* GeoserverXMLHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeoserverXMLHelper.m; path = Sentinel/GeoserverXMLHelper.m; sourceTree = "<group>"; };
+		C93B3AE9190E042000AAB99F /* DefaultsWMS-Beta.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "DefaultsWMS-Beta.plist"; path = "Resources/DefaultsWMS-Beta.plist"; sourceTree = "<group>"; };
+		C93B3AEC190E044900AAB99F /* DefaultsWFS-Beta.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "DefaultsWFS-Beta.plist"; path = "Resources/DefaultsWFS-Beta.plist"; sourceTree = "<group>"; };
+		C93B3AEF190E2D4C00AAB99F /* GASMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GASMapView.h; path = Sentinel/GASMapView.h; sourceTree = "<group>"; };
+		C93B3AF0190E2D4C00AAB99F /* GASMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GASMapView.m; path = Sentinel/GASMapView.m; sourceTree = "<group>"; };
+		C93B3AF2190E437000AAB99F /* GASToolbarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GASToolbarView.xib; path = Sentinel/GASToolbarView.xib; sourceTree = "<group>"; };
+		C93B3AF4190E479D00AAB99F /* GASToolbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GASToolbarViewController.h; path = Sentinel/GASToolbarViewController.h; sourceTree = "<group>"; };
+		C93B3AF5190E479D00AAB99F /* GASToolbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GASToolbarViewController.m; path = Sentinel/GASToolbarViewController.m; sourceTree = "<group>"; };
+		C93B3AF7190E4D0A00AAB99F /* GASToolbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GASToolbar.h; path = Sentinel/GASToolbar.h; sourceTree = "<group>"; };
+		C93B3AF8190E52CF00AAB99F /* HotspotFeatureNames.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = HotspotFeatureNames.plist; path = Resources/HotspotFeatureNames.plist; sourceTree = "<group>"; };
+		C93B3B4B190E7DE500AAB99F /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFHTTPRequestOperation.h; path = Libraries/AFNetworking/AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		C93B3B4C190E7DE500AAB99F /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFHTTPRequestOperation.m; path = Libraries/AFNetworking/AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		C93B3B4D190E7DE500AAB99F /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFHTTPRequestOperationManager.h; path = Libraries/AFNetworking/AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		C93B3B4E190E7DE500AAB99F /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFHTTPRequestOperationManager.m; path = Libraries/AFNetworking/AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		C93B3B4F190E7DE500AAB99F /* AFHTTPSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFHTTPSessionManager.h; path = Libraries/AFNetworking/AFHTTPSessionManager.h; sourceTree = "<group>"; };
+		C93B3B50190E7DE500AAB99F /* AFHTTPSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFHTTPSessionManager.m; path = Libraries/AFNetworking/AFHTTPSessionManager.m; sourceTree = "<group>"; };
+		C93B3B51190E7DE500AAB99F /* AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFNetworking.h; path = Libraries/AFNetworking/AFNetworking.h; sourceTree = "<group>"; };
+		C93B3B52190E7DE500AAB99F /* AFNetworkReachabilityManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFNetworkReachabilityManager.h; path = Libraries/AFNetworking/AFNetworkReachabilityManager.h; sourceTree = "<group>"; };
+		C93B3B53190E7DE500AAB99F /* AFNetworkReachabilityManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFNetworkReachabilityManager.m; path = Libraries/AFNetworking/AFNetworkReachabilityManager.m; sourceTree = "<group>"; };
+		C93B3B54190E7DE500AAB99F /* AFSecurityPolicy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFSecurityPolicy.h; path = Libraries/AFNetworking/AFSecurityPolicy.h; sourceTree = "<group>"; };
+		C93B3B55190E7DE500AAB99F /* AFSecurityPolicy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFSecurityPolicy.m; path = Libraries/AFNetworking/AFSecurityPolicy.m; sourceTree = "<group>"; };
+		C93B3B56190E7DE500AAB99F /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFURLConnectionOperation.h; path = Libraries/AFNetworking/AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		C93B3B57190E7DE500AAB99F /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFURLConnectionOperation.m; path = Libraries/AFNetworking/AFURLConnectionOperation.m; sourceTree = "<group>"; };
+		C93B3B58190E7DE500AAB99F /* AFURLRequestSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFURLRequestSerialization.h; path = Libraries/AFNetworking/AFURLRequestSerialization.h; sourceTree = "<group>"; };
+		C93B3B59190E7DE500AAB99F /* AFURLRequestSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFURLRequestSerialization.m; path = Libraries/AFNetworking/AFURLRequestSerialization.m; sourceTree = "<group>"; };
+		C93B3B5A190E7DE500AAB99F /* AFURLResponseSerialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFURLResponseSerialization.h; path = Libraries/AFNetworking/AFURLResponseSerialization.h; sourceTree = "<group>"; };
+		C93B3B5B190E7DE500AAB99F /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = Libraries/AFNetworking/AFURLResponseSerialization.m; sourceTree = "<group>"; };
+		C93B3B5C190E7DE500AAB99F /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = Libraries/AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
+		C93B3B5D190E7DE500AAB99F /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFURLSessionManager.m; path = Libraries/AFNetworking/AFURLSessionManager.m; sourceTree = "<group>"; };
+		C9A952C41908BED20090415D /* GeoserverManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeoserverManager.h; path = Sentinel/GeoserverManager.h; sourceTree = "<group>"; };
+		C9A952C51908BED20090415D /* GeoserverManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeoserverManager.m; path = Sentinel/GeoserverManager.m; sourceTree = "<group>"; };
+		C9A952C71908BF020090415D /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = Resources/Images/home.png; sourceTree = "<group>"; };
+		C9A952C81908BF020090415D /* home@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "home@2x.png"; path = "Resources/Images/home@2x.png"; sourceTree = "<group>"; };
+		C9A952C91908BF020090415D /* logo.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = logo.jpeg; path = Resources/Images/logo.jpeg; sourceTree = "<group>"; };
+		C9A952CA1908BF020090415D /* ModisFire-Grey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ModisFire-Grey.png"; path = "Resources/Images/ModisFire-Grey.png"; sourceTree = "<group>"; };
+		C9A952CB1908BF020090415D /* ModisFire-Orange.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ModisFire-Orange.png"; path = "Resources/Images/ModisFire-Orange.png"; sourceTree = "<group>"; };
+		C9A952CC1908BF020090415D /* ModisFire-Purple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ModisFire-Purple.png"; path = "Resources/Images/ModisFire-Purple.png"; sourceTree = "<group>"; };
+		C9A952CD1908BF020090415D /* ModisFire-Red.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ModisFire-Red.png"; path = "Resources/Images/ModisFire-Red.png"; sourceTree = "<group>"; };
+		C9A952CE1908BF020090415D /* ModisFire-Yellow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ModisFire-Yellow.png"; path = "Resources/Images/ModisFire-Yellow.png"; sourceTree = "<group>"; };
+		C9A952CF1908BF020090415D /* navbar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = navbar.png; path = Resources/Images/navbar.png; sourceTree = "<group>"; };
+		C9A952D01908BF020090415D /* navbar@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navbar@2x.png"; path = "Resources/Images/navbar@2x.png"; sourceTree = "<group>"; };
+		C9A952D11908BF020090415D /* refresh@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "refresh@2x.png"; path = "Resources/Images/refresh@2x.png"; sourceTree = "<group>"; };
+		C9A952D21908BF020090415D /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash.png; path = Resources/Images/splash.png; sourceTree = "<group>"; };
+		C9A952D31908BF020090415D /* splash@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "splash@2x.png"; path = "Resources/Images/splash@2x.png"; sourceTree = "<group>"; };
+		C9A952E11908BF290090415D /* TBXML.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TBXML.h; path = "Libraries/TBXML-master/TBXML.h"; sourceTree = "<group>"; };
+		C9A952E21908BF290090415D /* TBXML.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TBXML.m; path = "Libraries/TBXML-master/TBXML.m"; sourceTree = "<group>"; };
+		C9A952E71908BF440090415D /* GeoServer.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = GeoServer.plist; path = Resources/GeoServer.plist; sourceTree = "<group>"; };
+		C9A952E91908BF540090415D /* NSURL+RPC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSURL+RPC.h"; path = "Sentinel/NSURL+RPC.h"; sourceTree = "<group>"; };
+		C9A952EA1908BF540090415D /* NSURL+RPC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSURL+RPC.m"; path = "Sentinel/NSURL+RPC.m"; sourceTree = "<group>"; };
+		C9A952EC1908BF620090415D /* DefaultsWFS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = DefaultsWFS.plist; path = Resources/DefaultsWFS.plist; sourceTree = "<group>"; };
+		C9A952ED1908BF620090415D /* DefaultsWMS.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = DefaultsWMS.plist; path = Resources/DefaultsWMS.plist; sourceTree = "<group>"; };
+		C9A952F01908BF970090415D /* HotspotImages.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = HotspotImages.plist; path = Resources/HotspotImages.plist; sourceTree = "<group>"; };
+		C9A952F11908BF970090415D /* MapDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = MapDefaults.plist; path = Resources/MapDefaults.plist; sourceTree = "<group>"; };
+		C9A952F41908BFAB0090415D /* HotspotAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HotspotAnnotation.h; path = Sentinel/HotspotAnnotation.h; sourceTree = "<group>"; };
+		C9A952F51908BFAB0090415D /* HotspotAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HotspotAnnotation.m; path = Sentinel/HotspotAnnotation.m; sourceTree = "<group>"; };
+		C9A952F61908BFAB0090415D /* HotspotMetaDataView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = HotspotMetaDataView.xib; path = Sentinel/HotspotMetaDataView.xib; sourceTree = "<group>"; };
+		C9A952F71908BFAB0090415D /* HotspotMetaDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HotspotMetaDataViewController.h; path = Sentinel/HotspotMetaDataViewController.h; sourceTree = "<group>"; };
+		C9A952F81908BFAC0090415D /* HotspotMetaDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HotspotMetaDataViewController.m; path = Sentinel/HotspotMetaDataViewController.m; sourceTree = "<group>"; };
+		C9A952FC1908D9C50090415D /* NSString+Functions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSString+Functions.h"; path = "Sentinel/NSString+Functions.h"; sourceTree = "<group>"; };
+		C9A952FD1908D9C50090415D /* NSString+Functions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSString+Functions.m"; path = "Sentinel/NSString+Functions.m"; sourceTree = "<group>"; };
+		C9A953011908E3E40090415D /* FeatureInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = FeatureInfo.plist; path = Resources/FeatureInfo.plist; sourceTree = "<group>"; };
+		C9A953031908FB340090415D /* GASOverlay.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GASOverlay.h; path = Sentinel/GASOverlay.h; sourceTree = "<group>"; };
+		C9A953041908FB340090415D /* GASOverlay.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GASOverlay.m; path = Sentinel/GASOverlay.m; sourceTree = "<group>"; };
+		C9A95312190935360090415D /* GASOverlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GASOverlayView.h; path = Sentinel/GASOverlayView.h; sourceTree = "<group>"; };
+		C9A95313190935360090415D /* GASOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GASOverlayView.m; path = Sentinel/GASOverlayView.m; sourceTree = "<group>"; };
+		C9A9533B190A40B50090415D /* TermsOfService.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TermsOfService.xib; sourceTree = "<group>"; };
+		C9A9533D190A42C50090415D /* TermsOfServiceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TermsOfServiceViewController.h; sourceTree = "<group>"; };
+		C9A9533E190A42C50090415D /* TermsOfServiceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TermsOfServiceViewController.m; sourceTree = "<group>"; };
+		C9A95342190A8B5A0090415D /* GASHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GASHelpers.h; path = Sentinel/GASHelpers.h; sourceTree = "<group>"; };
+		C9A95343190A8B5A0090415D /* GASHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GASHelpers.m; path = Sentinel/GASHelpers.m; sourceTree = "<group>"; };
+		C9ABB936190633F700F107B4 /* Sentinel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sentinel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9ABB939190633F700F107B4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		C9ABB93B190633F700F107B4 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		C9ABB93D190633F700F107B4 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		C9ABB941190633F700F107B4 /* Sentinel-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Sentinel-Info.plist"; sourceTree = "<group>"; };
+		C9ABB943190633F700F107B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C9ABB945190633F700F107B4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		C9ABB947190633F700F107B4 /* Sentinel-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Sentinel-Prefix.pch"; sourceTree = "<group>"; };
+		C9ABB948190633F700F107B4 /* GASAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GASAppDelegate.h; path = Sentinel/GASAppDelegate.h; sourceTree = "<group>"; };
+		C9ABB949190633F700F107B4 /* GASAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GASAppDelegate.m; path = Sentinel/GASAppDelegate.m; sourceTree = "<group>"; };
+		C9ABB94C190633F700F107B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C9ABB94E190633F700F107B4 /* GASViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GASViewController.h; sourceTree = "<group>"; };
+		C9ABB94F190633F700F107B4 /* GASViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GASViewController.m; sourceTree = "<group>"; };
+		C9ABB951190633F700F107B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Sentinel/Images.xcassets; sourceTree = "<group>"; };
+		C9ABB957190633F700F107B4 /* SentinelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SentinelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9ABB958190633F700F107B4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		C9ABB960190633F700F107B4 /* SentinelTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SentinelTests-Info.plist"; sourceTree = "<group>"; };
+		C9ABB962190633F700F107B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		C9ABB964190633F700F107B4 /* SentinelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SentinelTests.m; sourceTree = "<group>"; };
+		C9ABB98B190635B000F107B4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C9ABB9CD1907807C00F107B4 /* GASHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GASHomeViewController.h; sourceTree = "<group>"; };
+		C9ABB9CE1907807C00F107B4 /* GASHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GASHomeViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9ABB933190633F700F107B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9ABB98C190635B000F107B4 /* MapKit.framework in Frameworks */,
+				C9ABB93C190633F700F107B4 /* CoreGraphics.framework in Frameworks */,
+				C9ABB93E190633F700F107B4 /* UIKit.framework in Frameworks */,
+				C9ABB93A190633F700F107B4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9ABB954190633F700F107B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9ABB959190633F700F107B4 /* XCTest.framework in Frameworks */,
+				C9ABB95B190633F700F107B4 /* UIKit.framework in Frameworks */,
+				C9ABB95A190633F700F107B4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C93B3AEB190E042700AAB99F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C9A952EC1908BF620090415D /* DefaultsWFS.plist */,
+				C9A952ED1908BF620090415D /* DefaultsWMS.plist */,
+				C93B3AE9190E042000AAB99F /* DefaultsWMS-Beta.plist */,
+				C93B3AEC190E044900AAB99F /* DefaultsWFS-Beta.plist */,
+				C9A952E71908BF440090415D /* GeoServer.plist */,
+				C9A953011908E3E40090415D /* FeatureInfo.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C93B3AEE190E297600AAB99F /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				C9ABB94B190633F700F107B4 /* Main.storyboard */,
+				C9ABB94E190633F700F107B4 /* GASViewController.h */,
+				C9ABB94F190633F700F107B4 /* GASViewController.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		C9A952B81908A5C70090415D /* TBXML */ = {
+			isa = PBXGroup;
+			children = (
+				C9A952E11908BF290090415D /* TBXML.h */,
+				C9A952E21908BF290090415D /* TBXML.m */,
+			);
+			name = TBXML;
+			sourceTree = "<group>";
+		};
+		C9A953061909030A0090415D /* Annotation */ = {
+			isa = PBXGroup;
+			children = (
+				C9A952F01908BF970090415D /* HotspotImages.plist */,
+				C9A952F41908BFAB0090415D /* HotspotAnnotation.h */,
+				C9A952F51908BFAB0090415D /* HotspotAnnotation.m */,
+				C9A952F61908BFAB0090415D /* HotspotMetaDataView.xib */,
+				C9A952F71908BFAB0090415D /* HotspotMetaDataViewController.h */,
+				C9A952F81908BFAC0090415D /* HotspotMetaDataViewController.m */,
+			);
+			name = Annotation;
+			sourceTree = "<group>";
+		};
+		C9A95307190908CD0090415D /* Overlay */ = {
+			isa = PBXGroup;
+			children = (
+				C9A953031908FB340090415D /* GASOverlay.h */,
+				C9A953041908FB340090415D /* GASOverlay.m */,
+				C9A95312190935360090415D /* GASOverlayView.h */,
+				C9A95313190935360090415D /* GASOverlayView.m */,
+			);
+			name = Overlay;
+			sourceTree = "<group>";
+		};
+		C9A9530B190916E40090415D /* Toolbar */ = {
+			isa = PBXGroup;
+			children = (
+				C93B3AF8190E52CF00AAB99F /* HotspotFeatureNames.plist */,
+				C93B3AF2190E437000AAB99F /* GASToolbarView.xib */,
+				C93B3AF4190E479D00AAB99F /* GASToolbarViewController.h */,
+				C93B3AF5190E479D00AAB99F /* GASToolbarViewController.m */,
+				C93B3AF7190E4D0A00AAB99F /* GASToolbar.h */,
+			);
+			name = Toolbar;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		C9A9531E190A2AE40090415D /* AFNetworking */ = {
+			isa = PBXGroup;
+			children = (
+				C93B3B4B190E7DE500AAB99F /* AFHTTPRequestOperation.h */,
+				C93B3B4C190E7DE500AAB99F /* AFHTTPRequestOperation.m */,
+				C93B3B4D190E7DE500AAB99F /* AFHTTPRequestOperationManager.h */,
+				C93B3B4E190E7DE500AAB99F /* AFHTTPRequestOperationManager.m */,
+				C93B3B4F190E7DE500AAB99F /* AFHTTPSessionManager.h */,
+				C93B3B50190E7DE500AAB99F /* AFHTTPSessionManager.m */,
+				C93B3B51190E7DE500AAB99F /* AFNetworking.h */,
+				C93B3B52190E7DE500AAB99F /* AFNetworkReachabilityManager.h */,
+				C93B3B53190E7DE500AAB99F /* AFNetworkReachabilityManager.m */,
+				C93B3B54190E7DE500AAB99F /* AFSecurityPolicy.h */,
+				C93B3B55190E7DE500AAB99F /* AFSecurityPolicy.m */,
+				C93B3B56190E7DE500AAB99F /* AFURLConnectionOperation.h */,
+				C93B3B57190E7DE500AAB99F /* AFURLConnectionOperation.m */,
+				C93B3B58190E7DE500AAB99F /* AFURLRequestSerialization.h */,
+				C93B3B59190E7DE500AAB99F /* AFURLRequestSerialization.m */,
+				C93B3B5A190E7DE500AAB99F /* AFURLResponseSerialization.h */,
+				C93B3B5B190E7DE500AAB99F /* AFURLResponseSerialization.m */,
+				C93B3B5C190E7DE500AAB99F /* AFURLSessionManager.h */,
+				C93B3B5D190E7DE500AAB99F /* AFURLSessionManager.m */,
+			);
+			name = AFNetworking;
+			sourceTree = "<group>";
+		};
+		C9A95340190A4B9E0090415D /* Home Screen */ = {
+			isa = PBXGroup;
+			children = (
+				C9ABB9CD1907807C00F107B4 /* GASHomeViewController.h */,
+				C9ABB9CE1907807C00F107B4 /* GASHomeViewController.m */,
+				C9A9533B190A40B50090415D /* TermsOfService.xib */,
+				C9A9533D190A42C50090415D /* TermsOfServiceViewController.h */,
+				C9A9533E190A42C50090415D /* TermsOfServiceViewController.m */,
+			);
+			name = "Home Screen";
+			sourceTree = "<group>";
+		};
+		C9A95341190A58970090415D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C9ABB997190656CB00F107B4 /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C9ABB92D190633F700F107B4 = {
+			isa = PBXGroup;
+			children = (
+				C9ABB948190633F700F107B4 /* GASAppDelegate.h */,
+				C9ABB949190633F700F107B4 /* GASAppDelegate.m */,
+				C9ABB951190633F700F107B4 /* Images.xcassets */,
+				C9A95341190A58970090415D /* Resources */,
+				C9ABB996190656B600F107B4 /* Map */,
+				C9ABB98D19063F7100F107B4 /* GeoServer Manager */,
+				C9ABB93F190633F700F107B4 /* Sentinel Controllers */,
+				C9ABB95E190633F700F107B4 /* SentinelTests */,
+				C9ABB938190633F700F107B4 /* Frameworks */,
+				C9ABB937190633F700F107B4 /* Products */,
+				C9ABB940190633F700F107B4 /* Supporting Files */,
+			);
+			sourceTree = "<group>";
+		};
+		C9ABB937190633F700F107B4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9ABB936190633F700F107B4 /* Sentinel.app */,
+				C9ABB957190633F700F107B4 /* SentinelTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9ABB938190633F700F107B4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C9ABB98B190635B000F107B4 /* MapKit.framework */,
+				C9ABB939190633F700F107B4 /* Foundation.framework */,
+				C9ABB93B190633F700F107B4 /* CoreGraphics.framework */,
+				C9ABB93D190633F700F107B4 /* UIKit.framework */,
+				C9ABB958190633F700F107B4 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C9ABB93F190633F700F107B4 /* Sentinel Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C93B3AEE190E297600AAB99F /* Main */,
+				C9A9530B190916E40090415D /* Toolbar */,
+				C9A95340190A4B9E0090415D /* Home Screen */,
+			);
+			name = "Sentinel Controllers";
+			path = Sentinel;
+			sourceTree = "<group>";
+		};
+		C9ABB940190633F700F107B4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9ABB941190633F700F107B4 /* Sentinel-Info.plist */,
+				C9ABB942190633F700F107B4 /* InfoPlist.strings */,
+				C9ABB945190633F700F107B4 /* main.m */,
+				C9ABB947190633F700F107B4 /* Sentinel-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			path = Sentinel;
+			sourceTree = "<group>";
+		};
+		C9ABB95E190633F700F107B4 /* SentinelTests */ = {
+			isa = PBXGroup;
+			children = (
+				C9ABB964190633F700F107B4 /* SentinelTests.m */,
+				C9ABB95F190633F700F107B4 /* Supporting Files */,
+			);
+			path = SentinelTests;
+			sourceTree = "<group>";
+		};
+		C9ABB95F190633F700F107B4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C9ABB960190633F700F107B4 /* SentinelTests-Info.plist */,
+				C9ABB961190633F700F107B4 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C9ABB98D19063F7100F107B4 /* GeoServer Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C93B3AEB190E042700AAB99F /* Resources */,
+				C9A9531E190A2AE40090415D /* AFNetworking */,
+				C9A952B81908A5C70090415D /* TBXML */,
+				C9A952C41908BED20090415D /* GeoserverManager.h */,
+				C9A952C51908BED20090415D /* GeoserverManager.m */,
+				C9A952E91908BF540090415D /* NSURL+RPC.h */,
+				C9A952EA1908BF540090415D /* NSURL+RPC.m */,
+				C9A952FC1908D9C50090415D /* NSString+Functions.h */,
+				C9A952FD1908D9C50090415D /* NSString+Functions.m */,
+				C93B3AE5190E003300AAB99F /* GeoserverXMLHelper.h */,
+				C93B3AE6190E003300AAB99F /* GeoserverXMLHelper.m */,
+			);
+			name = "GeoServer Manager";
+			sourceTree = "<group>";
+		};
+		C9ABB996190656B600F107B4 /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				C9A952F11908BF970090415D /* MapDefaults.plist */,
+				C9A95342190A8B5A0090415D /* GASHelpers.h */,
+				C9A95343190A8B5A0090415D /* GASHelpers.m */,
+				C9A95307190908CD0090415D /* Overlay */,
+				C9A953061909030A0090415D /* Annotation */,
+				C93B3AEF190E2D4C00AAB99F /* GASMapView.h */,
+				C93B3AF0190E2D4C00AAB99F /* GASMapView.m */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		C9ABB997190656CB00F107B4 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C9A952C71908BF020090415D /* home.png */,
+				C9A952C81908BF020090415D /* home@2x.png */,
+				C9A952C91908BF020090415D /* logo.jpeg */,
+				C9A952CA1908BF020090415D /* ModisFire-Grey.png */,
+				C9A952CB1908BF020090415D /* ModisFire-Orange.png */,
+				C9A952CC1908BF020090415D /* ModisFire-Purple.png */,
+				C9A952CD1908BF020090415D /* ModisFire-Red.png */,
+				C9A952CE1908BF020090415D /* ModisFire-Yellow.png */,
+				C9A952CF1908BF020090415D /* navbar.png */,
+				C9A952D01908BF020090415D /* navbar@2x.png */,
+				C9A952D11908BF020090415D /* refresh@2x.png */,
+				C9A952D21908BF020090415D /* splash.png */,
+				C9A952D31908BF020090415D /* splash@2x.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9ABB935190633F700F107B4 /* Sentinel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9ABB968190633F700F107B4 /* Build configuration list for PBXNativeTarget "Sentinel" */;
+			buildPhases = (
+				C9ABB932190633F700F107B4 /* Sources */,
+				C9ABB933190633F700F107B4 /* Frameworks */,
+				C9ABB934190633F700F107B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sentinel;
+			productName = Sentinel;
+			productReference = C9ABB936190633F700F107B4 /* Sentinel.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C9ABB956190633F700F107B4 /* SentinelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9ABB96B190633F700F107B4 /* Build configuration list for PBXNativeTarget "SentinelTests" */;
+			buildPhases = (
+				C9ABB953190633F700F107B4 /* Sources */,
+				C9ABB954190633F700F107B4 /* Frameworks */,
+				C9ABB955190633F700F107B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9ABB95D190633F700F107B4 /* PBXTargetDependency */,
+			);
+			name = SentinelTests;
+			productName = SentinelTests;
+			productReference = C9ABB957190633F700F107B4 /* SentinelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9ABB92E190633F700F107B4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = GAS;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Matt Rankin";
+				TargetAttributes = {
+					C9ABB956190633F700F107B4 = {
+						TestTargetID = C9ABB935190633F700F107B4;
+					};
+				};
+			};
+			buildConfigurationList = C9ABB931190633F700F107B4 /* Build configuration list for PBXProject "Sentinel" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C9ABB92D190633F700F107B4;
+			productRefGroup = C9ABB937190633F700F107B4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9ABB935190633F700F107B4 /* Sentinel */,
+				C9ABB956190633F700F107B4 /* SentinelTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C9ABB934190633F700F107B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C93B3AF9190E52CF00AAB99F /* HotspotFeatureNames.plist in Resources */,
+				C9A952E81908BF440090415D /* GeoServer.plist in Resources */,
+				C9A952D51908BF020090415D /* home@2x.png in Resources */,
+				C9A952EF1908BF620090415D /* DefaultsWMS.plist in Resources */,
+				C9A952DE1908BF020090415D /* refresh@2x.png in Resources */,
+				C9A9533C190A40B50090415D /* TermsOfService.xib in Resources */,
+				C9ABB952190633F700F107B4 /* Images.xcassets in Resources */,
+				C9ABB944190633F700F107B4 /* InfoPlist.strings in Resources */,
+				C93B3AED190E044900AAB99F /* DefaultsWFS-Beta.plist in Resources */,
+				C9ABB94D190633F700F107B4 /* Main.storyboard in Resources */,
+				C9A952DA1908BF020090415D /* ModisFire-Red.png in Resources */,
+				C9A952FA1908BFAC0090415D /* HotspotMetaDataView.xib in Resources */,
+				C9A952D61908BF020090415D /* logo.jpeg in Resources */,
+				C9A952DD1908BF020090415D /* navbar@2x.png in Resources */,
+				C9A952D71908BF020090415D /* ModisFire-Grey.png in Resources */,
+				C9A952D81908BF020090415D /* ModisFire-Orange.png in Resources */,
+				C9A952EE1908BF620090415D /* DefaultsWFS.plist in Resources */,
+				C9A953021908E3E40090415D /* FeatureInfo.plist in Resources */,
+				C9A952E01908BF020090415D /* splash@2x.png in Resources */,
+				C9A952DC1908BF020090415D /* navbar.png in Resources */,
+				C9A952F31908BF970090415D /* MapDefaults.plist in Resources */,
+				C9A952D41908BF020090415D /* home.png in Resources */,
+				C9A952DF1908BF020090415D /* splash.png in Resources */,
+				C9A952F21908BF970090415D /* HotspotImages.plist in Resources */,
+				C9A952DB1908BF020090415D /* ModisFire-Yellow.png in Resources */,
+				C9A952D91908BF020090415D /* ModisFire-Purple.png in Resources */,
+				C93B3AF3190E437000AAB99F /* GASToolbarView.xib in Resources */,
+				C93B3AEA190E042000AAB99F /* DefaultsWMS-Beta.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9ABB955190633F700F107B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9ABB963190633F700F107B4 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9ABB932190633F700F107B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C93B3B5E190E7DE500AAB99F /* AFHTTPRequestOperation.m in Sources */,
+				C9A9533F190A42C50090415D /* TermsOfServiceViewController.m in Sources */,
+				C9A95344190A8B5A0090415D /* GASHelpers.m in Sources */,
+				C9ABB94A190633F700F107B4 /* GASAppDelegate.m in Sources */,
+				C9ABB950190633F700F107B4 /* GASViewController.m in Sources */,
+				C9A952E51908BF290090415D /* TBXML.m in Sources */,
+				C9A95314190935360090415D /* GASOverlayView.m in Sources */,
+				C93B3B60190E7DE500AAB99F /* AFHTTPSessionManager.m in Sources */,
+				C9A952C61908BED20090415D /* GeoserverManager.m in Sources */,
+				C9A952EB1908BF540090415D /* NSURL+RPC.m in Sources */,
+				C93B3B61190E7DE500AAB99F /* AFNetworkReachabilityManager.m in Sources */,
+				C93B3B66190E7DE500AAB99F /* AFURLSessionManager.m in Sources */,
+				C9A952F91908BFAC0090415D /* HotspotAnnotation.m in Sources */,
+				C9ABB9CF1907807C00F107B4 /* GASHomeViewController.m in Sources */,
+				C93B3B63190E7DE500AAB99F /* AFURLConnectionOperation.m in Sources */,
+				C93B3B65190E7DE500AAB99F /* AFURLResponseSerialization.m in Sources */,
+				C9ABB946190633F700F107B4 /* main.m in Sources */,
+				C93B3B64190E7DE500AAB99F /* AFURLRequestSerialization.m in Sources */,
+				C93B3AF1190E2D4C00AAB99F /* GASMapView.m in Sources */,
+				C9A953051908FB340090415D /* GASOverlay.m in Sources */,
+				C93B3AF6190E479D00AAB99F /* GASToolbarViewController.m in Sources */,
+				C9A952FE1908D9C50090415D /* NSString+Functions.m in Sources */,
+				C9A952FB1908BFAC0090415D /* HotspotMetaDataViewController.m in Sources */,
+				C93B3B5F190E7DE500AAB99F /* AFHTTPRequestOperationManager.m in Sources */,
+				C93B3B62190E7DE500AAB99F /* AFSecurityPolicy.m in Sources */,
+				C93B3AE7190E003300AAB99F /* GeoserverXMLHelper.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9ABB953190633F700F107B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9ABB965190633F700F107B4 /* SentinelTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C9ABB95D190633F700F107B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9ABB935190633F700F107B4 /* Sentinel */;
+			targetProxy = C9ABB95C190633F700F107B4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C9ABB942190633F700F107B4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9ABB943190633F700F107B4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		C9ABB94B190633F700F107B4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9ABB94C190633F700F107B4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C9ABB961190633F700F107B4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9ABB962190633F700F107B4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C9ABB966190633F700F107B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		C9ABB967190633F700F107B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C9ABB969190633F700F107B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sentinel/Sentinel-Prefix.pch";
+				INFOPLIST_FILE = "Sentinel/Sentinel-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		C9ABB96A190633F700F107B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sentinel/Sentinel-Prefix.pch";
+				INFOPLIST_FILE = "Sentinel/Sentinel-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		C9ABB96C190633F700F107B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sentinel.app/Sentinel";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sentinel/Sentinel-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "SentinelTests/SentinelTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		C9ABB96D190633F700F107B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/Sentinel.app/Sentinel";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Sentinel/Sentinel-Prefix.pch";
+				INFOPLIST_FILE = "SentinelTests/SentinelTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9ABB931190633F700F107B4 /* Build configuration list for PBXProject "Sentinel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9ABB966190633F700F107B4 /* Debug */,
+				C9ABB967190633F700F107B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9ABB968190633F700F107B4 /* Build configuration list for PBXNativeTarget "Sentinel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9ABB969190633F700F107B4 /* Debug */,
+				C9ABB96A190633F700F107B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9ABB96B190633F700F107B4 /* Build configuration list for PBXNativeTarget "SentinelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9ABB96C190633F700F107B4 /* Debug */,
+				C9ABB96D190633F700F107B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C9ABB92E190633F700F107B4 /* Project object */;
+}
