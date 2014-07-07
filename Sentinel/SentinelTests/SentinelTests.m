@@ -2,7 +2,6 @@
 //  SentinelTests.m
 //  SentinelTests
 //
-//  Created by Matt Rankin on 22/04/2014.
 //
 
 #import <XCTest/XCTest.h>

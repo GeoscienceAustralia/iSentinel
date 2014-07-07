@@ -2,7 +2,6 @@
 //  TermsOfServiceViewController.h
 //  Sentinel
 //
-//  Created by Matt Rankin on 25/04/2014.
 //
 
 #import <UIKit/UIKit.h>

@@ -2,19 +2,21 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>time</key>
-	<string>esri:datetime</string>
+	<key>satellite</key>
+	<string>sentinel:satellite</string>
+	<key>satellite_operating_agency</key>
+	<string>sentinel:satellite_operating_agency</string>
 	<key>temp</key>
-	<string>esri:temp_k</string>
-	<key>source</key>
-	<string>esri:instrument</string>
+	<string>sentinel:temp_kelvin</string>
 	<key>latitude</key>
-	<string>esri:latitude</string>
+	<string>sentinel:latitude</string>
 	<key>longitude</key>
-	<string>esri:longitude</string>
+	<string>sentinel:longitude</string>
 	<key>power</key>
-	<string>esri:power</string>
+	<string>sentinel:power</string>
 	<key>confidence</key>
-	<string>esri:confidence</string>
+	<string>sentinel:confidence</string>
+	<key>age</key>
+	<string>sentinel:age_hours</string>
 </dict>
 </plist>

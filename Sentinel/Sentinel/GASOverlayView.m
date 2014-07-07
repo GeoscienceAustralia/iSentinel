@@ -2,7 +2,6 @@
 //  GASOverlayView.m
 //  Sentinel
 //
-//  Created by Matt Rankin on 24/04/2014.
 //
 
 #import "GASOverlayView.h"
@@ -19,13 +18,20 @@
     if ([[GeoserverManager sharedManager] cachedImageForBoundingBox:[GASHelpers boundingBoxWithMapRect:mapRect]]) {
         return YES;
     } else {
-        [[GeoserverManager sharedManager] requestImageForBoundingBox:[GASHelpers boundingBoxWithMapRect:mapRect] size:CGSizeMake(TILE_SIZE, TILE_SIZE) layers:[(GASOverlay *)self.overlay layers] success:^(UIImage *image) {
-            [self setNeedsDisplayInMapRect:mapRect zoomScale:zoomScale];
-        } failure:^{
-            NSLog(@"Image fetch failed");
-        }];
+        [self requestMapRect:mapRect zoomScale:zoomScale];
         return NO;
     }
+}
+
+- (void)requestMapRect:(MKMapRect)mapRect
+             zoomScale:(MKZoomScale)zoomScale {
+    [[GeoserverManager sharedManager] requestImageForBoundingBox:[GASHelpers boundingBoxWithMapRect:mapRect] size:CGSizeMake(TILE_SIZE, TILE_SIZE) layers:[(GASOverlay *)self.overlay layers] success:^(UIImage *image) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self setNeedsDisplayInMapRect:mapRect zoomScale:zoomScale];
+        });
+    } failure:^{
+        NSLog(@"Image fetch failed");
+    }];
 }
 
 - (void)drawMapRect:(MKMapRect)mapRect

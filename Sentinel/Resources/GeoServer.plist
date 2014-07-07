@@ -3,12 +3,12 @@
 <plist version="1.0">
 <dict>
 	<key>WFS</key>
-	<string>http://sentinel.ga.gov.au/wfsconnector/com.esri.wfs.Esrimap</string>
+	<string>http://sentinel.ga.gov.au/geoserver/sentinel/ows</string>
 	<key>WFS_BETA</key>
-	<string>http://sentinel-new.ga.gov.au/geoserver/sentinel/wfs</string>
+	<string>http://sentinel.ga.gov.au/geoserver/sentinel/ows</string>
 	<key>WMS</key>
-	<string>http://sentinel.ga.gov.au/wmsconnector/com.esri.wms.Esrimap</string>
+	<string>http://sentinel.ga.gov.au/geoserver/sentinel/ows</string>
 	<key>WMS_BETA</key>
-	<string>http://sentinel-new.ga.gov.au/geoserver/sentinel/wms</string>
+	<string>http://sentinel.ga.gov.au/geoserver/sentinel/ows</string>
 </dict>
 </plist>

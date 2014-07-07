@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		010714061961840200422311 /* GASToolbarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 010714051961840200422311 /* GASToolbarView.xib */; };
+		01535E4A1962A3000074D5AE /* CachingAFSNetworkingOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 01535E491962A3000074D5AE /* CachingAFSNetworkingOperation.m */; };
+		01FA3B39196A7C25000A0F45 /* OCAlgorithms.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FA3B31196A7C25000A0F45 /* OCAlgorithms.m */; };
+		01FA3B3A196A7C25000A0F45 /* OCAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FA3B33196A7C25000A0F45 /* OCAnnotation.m */; };
+		01FA3B3B196A7C25000A0F45 /* OCDistance.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FA3B35196A7C25000A0F45 /* OCDistance.m */; };
+		01FA3B3C196A7C25000A0F45 /* OCMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = 01FA3B38196A7C25000A0F45 /* OCMapView.m */; };
 		C93B3AE7190E003300AAB99F /* GeoserverXMLHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = C93B3AE6190E003300AAB99F /* GeoserverXMLHelper.m */; };
 		C93B3AEA190E042000AAB99F /* DefaultsWMS-Beta.plist in Resources */ = {isa = PBXBuildFile; fileRef = C93B3AE9190E042000AAB99F /* DefaultsWMS-Beta.plist */; };
 		C93B3AED190E044900AAB99F /* DefaultsWFS-Beta.plist in Resources */ = {isa = PBXBuildFile; fileRef = C93B3AEC190E044900AAB99F /* DefaultsWFS-Beta.plist */; };
 		C93B3AF1190E2D4C00AAB99F /* GASMapView.m in Sources */ = {isa = PBXBuildFile; fileRef = C93B3AF0190E2D4C00AAB99F /* GASMapView.m */; };
-		C93B3AF3190E437000AAB99F /* GASToolbarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C93B3AF2190E437000AAB99F /* GASToolbarView.xib */; };
 		C93B3AF6190E479D00AAB99F /* GASToolbarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C93B3AF5190E479D00AAB99F /* GASToolbarViewController.m */; };
 		C93B3AF9190E52CF00AAB99F /* HotspotFeatureNames.plist in Resources */ = {isa = PBXBuildFile; fileRef = C93B3AF8190E52CF00AAB99F /* HotspotFeatureNames.plist */; };
 		C93B3B5E190E7DE500AAB99F /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = C93B3B4C190E7DE500AAB99F /* AFHTTPRequestOperation.m */; };
@@ -23,6 +28,8 @@
 		C93B3B64190E7DE500AAB99F /* AFURLRequestSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C93B3B59190E7DE500AAB99F /* AFURLRequestSerialization.m */; };
 		C93B3B65190E7DE500AAB99F /* AFURLResponseSerialization.m in Sources */ = {isa = PBXBuildFile; fileRef = C93B3B5B190E7DE500AAB99F /* AFURLResponseSerialization.m */; };
 		C93B3B66190E7DE500AAB99F /* AFURLSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C93B3B5D190E7DE500AAB99F /* AFURLSessionManager.m */; };
+		C980E908195D605D001A8CDE /* GASErrorHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = C980E907195D605D001A8CDE /* GASErrorHandler.m */; };
+		C980E90A195D674B001A8CDE /* SettingsDefaults.plist in Resources */ = {isa = PBXBuildFile; fileRef = C980E909195D674B001A8CDE /* SettingsDefaults.plist */; };
 		C9A952C61908BED20090415D /* GeoserverManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C9A952C51908BED20090415D /* GeoserverManager.m */; };
 		C9A952D41908BF020090415D /* home.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A952C71908BF020090415D /* home.png */; };
 		C9A952D51908BF020090415D /* home@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C9A952C81908BF020090415D /* home@2x.png */; };
@@ -63,13 +70,15 @@
 		C9ABB94D190633F700F107B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9ABB94B190633F700F107B4 /* Main.storyboard */; };
 		C9ABB950190633F700F107B4 /* GASViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9ABB94F190633F700F107B4 /* GASViewController.m */; };
 		C9ABB952190633F700F107B4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9ABB951190633F700F107B4 /* Images.xcassets */; };
-		C9ABB959190633F700F107B4 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9ABB958190633F700F107B4 /* XCTest.framework */; };
 		C9ABB95A190633F700F107B4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9ABB939190633F700F107B4 /* Foundation.framework */; };
 		C9ABB95B190633F700F107B4 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9ABB93D190633F700F107B4 /* UIKit.framework */; };
 		C9ABB963190633F700F107B4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = C9ABB961190633F700F107B4 /* InfoPlist.strings */; };
 		C9ABB965190633F700F107B4 /* SentinelTests.m in Sources */ = {isa = PBXBuildFile; fileRef = C9ABB964190633F700F107B4 /* SentinelTests.m */; };
 		C9ABB98C190635B000F107B4 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9ABB98B190635B000F107B4 /* MapKit.framework */; };
 		C9ABB9CF1907807C00F107B4 /* GASHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C9ABB9CE1907807C00F107B4 /* GASHomeViewController.m */; };
+		C9F9687C195A1B8400E15408 /* GASProximityChecker.m in Sources */ = {isa = PBXBuildFile; fileRef = C9F9687B195A1B8400E15408 /* GASProximityChecker.m */; };
+		C9F9687E195B233E00E15408 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C9F9687D195B233E00E15408 /* CoreLocation.framework */; };
+		C9F96883195B7F8A00E15408 /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C9F96882195B7F8A00E15408 /* Settings.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,13 +92,25 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		010714051961840200422311 /* GASToolbarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GASToolbarView.xib; path = Sentinel/GASToolbarView.xib; sourceTree = "<group>"; };
+		01535E481962A2660074D5AE /* CachingAFSNetworkingOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CachingAFSNetworkingOperation.h; path = Sentinel/CachingAFSNetworkingOperation.h; sourceTree = "<group>"; };
+		01535E491962A3000074D5AE /* CachingAFSNetworkingOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CachingAFSNetworkingOperation.m; path = Sentinel/CachingAFSNetworkingOperation.m; sourceTree = "<group>"; };
+		01FA3B2F196A7C25000A0F45 /* OCAlgorithmDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCAlgorithmDelegate.h; sourceTree = "<group>"; };
+		01FA3B30196A7C25000A0F45 /* OCAlgorithms.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCAlgorithms.h; sourceTree = "<group>"; };
+		01FA3B31196A7C25000A0F45 /* OCAlgorithms.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCAlgorithms.m; sourceTree = "<group>"; };
+		01FA3B32196A7C25000A0F45 /* OCAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCAnnotation.h; sourceTree = "<group>"; };
+		01FA3B33196A7C25000A0F45 /* OCAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCAnnotation.m; sourceTree = "<group>"; };
+		01FA3B34196A7C25000A0F45 /* OCDistance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCDistance.h; sourceTree = "<group>"; };
+		01FA3B35196A7C25000A0F45 /* OCDistance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCDistance.m; sourceTree = "<group>"; };
+		01FA3B36196A7C25000A0F45 /* OCGrouping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCGrouping.h; sourceTree = "<group>"; };
+		01FA3B37196A7C25000A0F45 /* OCMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OCMapView.h; sourceTree = "<group>"; };
+		01FA3B38196A7C25000A0F45 /* OCMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OCMapView.m; sourceTree = "<group>"; };
 		C93B3AE5190E003300AAB99F /* GeoserverXMLHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeoserverXMLHelper.h; path = Sentinel/GeoserverXMLHelper.h; sourceTree = "<group>"; };
 		C93B3AE6190E003300AAB99F /* GeoserverXMLHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeoserverXMLHelper.m; path = Sentinel/GeoserverXMLHelper.m; sourceTree = "<group>"; };
 		C93B3AE9190E042000AAB99F /* DefaultsWMS-Beta.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "DefaultsWMS-Beta.plist"; path = "Resources/DefaultsWMS-Beta.plist"; sourceTree = "<group>"; };
 		C93B3AEC190E044900AAB99F /* DefaultsWFS-Beta.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "DefaultsWFS-Beta.plist"; path = "Resources/DefaultsWFS-Beta.plist"; sourceTree = "<group>"; };
 		C93B3AEF190E2D4C00AAB99F /* GASMapView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GASMapView.h; path = Sentinel/GASMapView.h; sourceTree = "<group>"; };
 		C93B3AF0190E2D4C00AAB99F /* GASMapView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GASMapView.m; path = Sentinel/GASMapView.m; sourceTree = "<group>"; };
-		C93B3AF2190E437000AAB99F /* GASToolbarView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = GASToolbarView.xib; path = Sentinel/GASToolbarView.xib; sourceTree = "<group>"; };
 		C93B3AF4190E479D00AAB99F /* GASToolbarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GASToolbarViewController.h; path = Sentinel/GASToolbarViewController.h; sourceTree = "<group>"; };
 		C93B3AF5190E479D00AAB99F /* GASToolbarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GASToolbarViewController.m; path = Sentinel/GASToolbarViewController.m; sourceTree = "<group>"; };
 		C93B3AF7190E4D0A00AAB99F /* GASToolbar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GASToolbar.h; path = Sentinel/GASToolbar.h; sourceTree = "<group>"; };
@@ -113,6 +134,9 @@
 		C93B3B5B190E7DE500AAB99F /* AFURLResponseSerialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFURLResponseSerialization.m; path = Libraries/AFNetworking/AFURLResponseSerialization.m; sourceTree = "<group>"; };
 		C93B3B5C190E7DE500AAB99F /* AFURLSessionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AFURLSessionManager.h; path = Libraries/AFNetworking/AFURLSessionManager.h; sourceTree = "<group>"; };
 		C93B3B5D190E7DE500AAB99F /* AFURLSessionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AFURLSessionManager.m; path = Libraries/AFNetworking/AFURLSessionManager.m; sourceTree = "<group>"; };
+		C980E906195D605D001A8CDE /* GASErrorHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GASErrorHandler.h; path = Sentinel/GASErrorHandler.h; sourceTree = "<group>"; };
+		C980E907195D605D001A8CDE /* GASErrorHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GASErrorHandler.m; path = Sentinel/GASErrorHandler.m; sourceTree = "<group>"; };
+		C980E909195D674B001A8CDE /* SettingsDefaults.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = SettingsDefaults.plist; path = Sentinel/SettingsDefaults.plist; sourceTree = "<group>"; };
 		C9A952C41908BED20090415D /* GeoserverManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GeoserverManager.h; path = Sentinel/GeoserverManager.h; sourceTree = "<group>"; };
 		C9A952C51908BED20090415D /* GeoserverManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GeoserverManager.m; path = Sentinel/GeoserverManager.m; sourceTree = "<group>"; };
 		C9A952C71908BF020090415D /* home.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home.png; path = Resources/Images/home.png; sourceTree = "<group>"; };
@@ -169,13 +193,16 @@
 		C9ABB94F190633F700F107B4 /* GASViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GASViewController.m; sourceTree = "<group>"; };
 		C9ABB951190633F700F107B4 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Sentinel/Images.xcassets; sourceTree = "<group>"; };
 		C9ABB957190633F700F107B4 /* SentinelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SentinelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C9ABB958190633F700F107B4 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		C9ABB960190633F700F107B4 /* SentinelTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SentinelTests-Info.plist"; sourceTree = "<group>"; };
 		C9ABB962190633F700F107B4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		C9ABB964190633F700F107B4 /* SentinelTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SentinelTests.m; sourceTree = "<group>"; };
 		C9ABB98B190635B000F107B4 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C9ABB9CD1907807C00F107B4 /* GASHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GASHomeViewController.h; sourceTree = "<group>"; };
 		C9ABB9CE1907807C00F107B4 /* GASHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GASHomeViewController.m; sourceTree = "<group>"; };
+		C9F9687A195A1B8400E15408 /* GASProximityChecker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GASProximityChecker.h; sourceTree = "<group>"; };
+		C9F9687B195A1B8400E15408 /* GASProximityChecker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GASProximityChecker.m; sourceTree = "<group>"; };
+		C9F9687D195B233E00E15408 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C9F96882195B7F8A00E15408 /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = Settings.bundle; path = Resources/Settings.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,6 +210,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9F9687E195B233E00E15408 /* CoreLocation.framework in Frameworks */,
 				C9ABB98C190635B000F107B4 /* MapKit.framework in Frameworks */,
 				C9ABB93C190633F700F107B4 /* CoreGraphics.framework in Frameworks */,
 				C9ABB93E190633F700F107B4 /* UIKit.framework in Frameworks */,
@@ -194,7 +222,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9ABB959190633F700F107B4 /* XCTest.framework in Frameworks */,
 				C9ABB95B190633F700F107B4 /* UIKit.framework in Frameworks */,
 				C9ABB95A190633F700F107B4 /* Foundation.framework in Frameworks */,
 			);
@@ -203,6 +230,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		01FA3B2E196A7C25000A0F45 /* OCMapView */ = {
+			isa = PBXGroup;
+			children = (
+				01FA3B2F196A7C25000A0F45 /* OCAlgorithmDelegate.h */,
+				01FA3B30196A7C25000A0F45 /* OCAlgorithms.h */,
+				01FA3B31196A7C25000A0F45 /* OCAlgorithms.m */,
+				01FA3B32196A7C25000A0F45 /* OCAnnotation.h */,
+				01FA3B33196A7C25000A0F45 /* OCAnnotation.m */,
+				01FA3B34196A7C25000A0F45 /* OCDistance.h */,
+				01FA3B35196A7C25000A0F45 /* OCDistance.m */,
+				01FA3B36196A7C25000A0F45 /* OCGrouping.h */,
+				01FA3B37196A7C25000A0F45 /* OCMapView.h */,
+				01FA3B38196A7C25000A0F45 /* OCMapView.m */,
+			);
+			name = OCMapView;
+			path = Libraries/OCMapView;
+			sourceTree = "<group>";
+		};
 		C93B3AEB190E042700AAB99F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -224,6 +269,15 @@
 				C9ABB94F190633F700F107B4 /* GASViewController.m */,
 			);
 			name = Main;
+			sourceTree = "<group>";
+		};
+		C980E905195D6043001A8CDE /* Error Handling */ = {
+			isa = PBXGroup;
+			children = (
+				C980E906195D605D001A8CDE /* GASErrorHandler.h */,
+				C980E907195D605D001A8CDE /* GASErrorHandler.m */,
+			);
+			name = "Error Handling";
 			sourceTree = "<group>";
 		};
 		C9A952B81908A5C70090415D /* TBXML */ = {
@@ -262,8 +316,8 @@
 		C9A9530B190916E40090415D /* Toolbar */ = {
 			isa = PBXGroup;
 			children = (
+				010714051961840200422311 /* GASToolbarView.xib */,
 				C93B3AF8190E52CF00AAB99F /* HotspotFeatureNames.plist */,
-				C93B3AF2190E437000AAB99F /* GASToolbarView.xib */,
 				C93B3AF4190E479D00AAB99F /* GASToolbarViewController.h */,
 				C93B3AF5190E479D00AAB99F /* GASToolbarViewController.m */,
 				C93B3AF7190E4D0A00AAB99F /* GASToolbar.h */,
@@ -314,6 +368,8 @@
 			isa = PBXGroup;
 			children = (
 				C9ABB997190656CB00F107B4 /* Images */,
+				C9F96882195B7F8A00E15408 /* Settings.bundle */,
+				C980E909195D674B001A8CDE /* SettingsDefaults.plist */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -321,6 +377,7 @@
 		C9ABB92D190633F700F107B4 = {
 			isa = PBXGroup;
 			children = (
+				C980E905195D6043001A8CDE /* Error Handling */,
 				C9ABB948190633F700F107B4 /* GASAppDelegate.h */,
 				C9ABB949190633F700F107B4 /* GASAppDelegate.m */,
 				C9ABB951190633F700F107B4 /* Images.xcassets */,
@@ -347,11 +404,11 @@
 		C9ABB938190633F700F107B4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C9F9687D195B233E00E15408 /* CoreLocation.framework */,
 				C9ABB98B190635B000F107B4 /* MapKit.framework */,
 				C9ABB939190633F700F107B4 /* Foundation.framework */,
 				C9ABB93B190633F700F107B4 /* CoreGraphics.framework */,
 				C9ABB93D190633F700F107B4 /* UIKit.framework */,
-				C9ABB958190633F700F107B4 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -359,6 +416,7 @@
 		C9ABB93F190633F700F107B4 /* Sentinel Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				C9F96879195A1B6700E15408 /* Notifier */,
 				C93B3AEE190E297600AAB99F /* Main */,
 				C9A9530B190916E40090415D /* Toolbar */,
 				C9A95340190A4B9E0090415D /* Home Screen */,
@@ -400,6 +458,7 @@
 		C9ABB98D19063F7100F107B4 /* GeoServer Manager */ = {
 			isa = PBXGroup;
 			children = (
+				01FA3B2E196A7C25000A0F45 /* OCMapView */,
 				C93B3AEB190E042700AAB99F /* Resources */,
 				C9A9531E190A2AE40090415D /* AFNetworking */,
 				C9A952B81908A5C70090415D /* TBXML */,
@@ -411,6 +470,8 @@
 				C9A952FD1908D9C50090415D /* NSString+Functions.m */,
 				C93B3AE5190E003300AAB99F /* GeoserverXMLHelper.h */,
 				C93B3AE6190E003300AAB99F /* GeoserverXMLHelper.m */,
+				01535E481962A2660074D5AE /* CachingAFSNetworkingOperation.h */,
+				01535E491962A3000074D5AE /* CachingAFSNetworkingOperation.m */,
 			);
 			name = "GeoServer Manager";
 			sourceTree = "<group>";
@@ -447,6 +508,15 @@
 				C9A952D31908BF020090415D /* splash@2x.png */,
 			);
 			name = Images;
+			sourceTree = "<group>";
+		};
+		C9F96879195A1B6700E15408 /* Notifier */ = {
+			isa = PBXGroup;
+			children = (
+				C9F9687A195A1B8400E15408 /* GASProximityChecker.h */,
+				C9F9687B195A1B8400E15408 /* GASProximityChecker.m */,
+			);
+			name = Notifier;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -494,7 +564,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = GAS;
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Matt Rankin";
 				TargetAttributes = {
 					C9ABB956190633F700F107B4 = {
@@ -548,11 +618,13 @@
 				C9A952DC1908BF020090415D /* navbar.png in Resources */,
 				C9A952F31908BF970090415D /* MapDefaults.plist in Resources */,
 				C9A952D41908BF020090415D /* home.png in Resources */,
+				C9F96883195B7F8A00E15408 /* Settings.bundle in Resources */,
 				C9A952DF1908BF020090415D /* splash.png in Resources */,
+				C980E90A195D674B001A8CDE /* SettingsDefaults.plist in Resources */,
 				C9A952F21908BF970090415D /* HotspotImages.plist in Resources */,
 				C9A952DB1908BF020090415D /* ModisFire-Yellow.png in Resources */,
 				C9A952D91908BF020090415D /* ModisFire-Purple.png in Resources */,
-				C93B3AF3190E437000AAB99F /* GASToolbarView.xib in Resources */,
+				010714061961840200422311 /* GASToolbarView.xib in Resources */,
 				C93B3AEA190E042000AAB99F /* DefaultsWMS-Beta.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -573,21 +645,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				C93B3B5E190E7DE500AAB99F /* AFHTTPRequestOperation.m in Sources */,
+				01535E4A1962A3000074D5AE /* CachingAFSNetworkingOperation.m in Sources */,
+				01FA3B3C196A7C25000A0F45 /* OCMapView.m in Sources */,
 				C9A9533F190A42C50090415D /* TermsOfServiceViewController.m in Sources */,
 				C9A95344190A8B5A0090415D /* GASHelpers.m in Sources */,
 				C9ABB94A190633F700F107B4 /* GASAppDelegate.m in Sources */,
 				C9ABB950190633F700F107B4 /* GASViewController.m in Sources */,
 				C9A952E51908BF290090415D /* TBXML.m in Sources */,
 				C9A95314190935360090415D /* GASOverlayView.m in Sources */,
+				C980E908195D605D001A8CDE /* GASErrorHandler.m in Sources */,
 				C93B3B60190E7DE500AAB99F /* AFHTTPSessionManager.m in Sources */,
+				C9F9687C195A1B8400E15408 /* GASProximityChecker.m in Sources */,
 				C9A952C61908BED20090415D /* GeoserverManager.m in Sources */,
 				C9A952EB1908BF540090415D /* NSURL+RPC.m in Sources */,
 				C93B3B61190E7DE500AAB99F /* AFNetworkReachabilityManager.m in Sources */,
 				C93B3B66190E7DE500AAB99F /* AFURLSessionManager.m in Sources */,
+				01FA3B39196A7C25000A0F45 /* OCAlgorithms.m in Sources */,
 				C9A952F91908BFAC0090415D /* HotspotAnnotation.m in Sources */,
 				C9ABB9CF1907807C00F107B4 /* GASHomeViewController.m in Sources */,
 				C93B3B63190E7DE500AAB99F /* AFURLConnectionOperation.m in Sources */,
 				C93B3B65190E7DE500AAB99F /* AFURLResponseSerialization.m in Sources */,
+				01FA3B3B196A7C25000A0F45 /* OCDistance.m in Sources */,
 				C9ABB946190633F700F107B4 /* main.m in Sources */,
 				C93B3B64190E7DE500AAB99F /* AFURLRequestSerialization.m in Sources */,
 				C93B3AF1190E2D4C00AAB99F /* GASMapView.m in Sources */,
@@ -597,6 +675,7 @@
 				C9A952FB1908BFAC0090415D /* HotspotMetaDataViewController.m in Sources */,
 				C93B3B5F190E7DE500AAB99F /* AFHTTPRequestOperationManager.m in Sources */,
 				C93B3B62190E7DE500AAB99F /* AFSecurityPolicy.m in Sources */,
+				01FA3B3A196A7C25000A0F45 /* OCAnnotation.m in Sources */,
 				C93B3AE7190E003300AAB99F /* GeoserverXMLHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -730,6 +809,7 @@
 				GCC_PREFIX_HEADER = "Sentinel/Sentinel-Prefix.pch";
 				INFOPLIST_FILE = "Sentinel/Sentinel-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = " -weak-lSystem";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -744,6 +824,7 @@
 				GCC_PREFIX_HEADER = "Sentinel/Sentinel-Prefix.pch";
 				INFOPLIST_FILE = "Sentinel/Sentinel-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
+				OTHER_LDFLAGS = " -weak-lSystem";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

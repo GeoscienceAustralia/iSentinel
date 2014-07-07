@@ -2,14 +2,14 @@
 //  GASViewController.h
 //  Sentinel
 //
-//  Created by Matt Rankin on 22/04/2014.
 //
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
 #import "GASToolbarViewController.h"
+#import "GASProximityChecker.h"
 
 
-@interface GASViewController : UIViewController <MKMapViewDelegate, UIPopoverControllerDelegate, GASToolbarViewControllerDelegate>
+@interface GASViewController : UIViewController <MKMapViewDelegate, UIPopoverControllerDelegate,  GASToolbarViewControllerDelegate, GASProximityCheckerDelegate>
 
 @end

@@ -2,7 +2,6 @@
 //  GeoserverXMLHelper.m
 //  Sentinel
 //
-//  Created by Matt Rankin on 28/04/2014.
 //
 
 #import "GeoserverXMLHelper.h"
@@ -11,31 +10,74 @@
 
 //
 // Convert raw dictionary representation of the XML into useful feature set
+// FilterFeatures are in the form filter-minHrs-maxHrs. The data will be placed into
+// the filter-min-max feature min (inc) max(exclusive). non-filtered elements will be
+// left in the original layer.
 //
 + (NSDictionary *)buildFilteredFeatureList:(NSDictionary *)featureDictionary
+                                   filters:(NSArray *)filterFeatures
 {
     NSDictionary *featureDataTags = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"FeatureInfo" ofType:@"plist"]];
     NSMutableDictionary *filteredFeatureDictionary = [NSMutableDictionary dictionary];
-    id featureList = [[featureDictionary valueForKey:@"wfs:FeatureCollection"] valueForKey:@"gml:featureMember"];
     
-    if ([featureList isKindOfClass:[NSDictionary class]]) {
-        featureList = @[featureList];
+    // Split the filterFeatures into pieces and store min/max
+    // We will use these to split the list
+    // NOTE: This could all be done via WFS filters on the age field directly to the server.
+    // At this time we have no knowledge on the performance and resource implications of the production system
+    // so keeping it low key for the backend for prototype.
+    NSMutableDictionary *filtersExpanded = [NSMutableDictionary dictionary];
+    for (NSString *filter in filterFeatures) {
+        NSArray *filterParts = [filter componentsSeparatedByString:@"-"];
+        int min = [[filterParts objectAtIndex:1] integerValue];
+        int max = [[filterParts objectAtIndex:2] integerValue];
+        NSMutableArray *dataArray = [[NSMutableArray alloc] initWithCapacity: 2];
+        [dataArray insertObject:[NSNumber numberWithInt:min] atIndex:0];
+        [dataArray insertObject:[NSNumber numberWithInt:max] atIndex:1];
+        [filtersExpanded setValue:dataArray forKey:filter];
     }
     
-    for (NSDictionary *feature in featureList) {
-        NSString *featureName = [[feature allKeys] lastObject];
-        NSDictionary *featureData = [feature valueForKey:featureName];
-        NSString *featureType = [featureName stringByReplacingOccurrencesOfString:@"esri:" withString:@""];
+    id featureList = [[featureDictionary valueForKey:@"wfs:FeatureCollection"] valueForKey:@"gml:featureMembers"];
+    
+    if(![featureList isKindOfClass:[NSDictionary class]]) {
+        return filteredFeatureDictionary;
+    }
+    
+    for (NSString *featureName in [featureList allKeys]) {
+      for (NSDictionary *featureData in [featureList valueForKey:featureName]) {
+        NSString *featureType = [featureName stringByReplacingOccurrencesOfString:@"sentinel:" withString:@""];
         NSMutableDictionary *filteredFeatureData = [NSMutableDictionary dictionary];
         for (NSString *featureDataTag in [featureDataTags allKeys]) {
             [filteredFeatureData setValue:[featureData valueForKey:[featureDataTags valueForKey:featureDataTag]] forKey:featureDataTag];
         }
-        NSMutableArray *dataForFeatureType = [filteredFeatureDictionary valueForKey:featureType];
+        
+        // Default to the feature we are in
+        NSString *name = featureType;
+
+        // Whats the age of the feature
+        NSString *ageAsString = [filteredFeatureData valueForKey:@"age"];
+        if (ageAsString) {
+           int age = [ageAsString integerValue];
+            
+           // Now we need to determine which list to stick it in.
+           for(id key in filtersExpanded) {
+              NSArray *elements = [filtersExpanded objectForKey:key];
+              int min = [[elements objectAtIndex:0] integerValue];
+              int max = [[elements objectAtIndex:1] integerValue];
+                
+              if (age <= max && age > min) {
+                 name = key;
+                 break;
+              }
+           }
+        }
+
+        NSMutableArray *dataForFeatureType = [filteredFeatureDictionary valueForKey:name];
         if (dataForFeatureType != nil) {
             [dataForFeatureType addObject:(NSDictionary *)filteredFeatureData];
         } else {
-            [filteredFeatureDictionary setValue:[NSMutableArray arrayWithObject:(NSDictionary *)filteredFeatureData] forKey:featureType];
+            [filteredFeatureDictionary setValue:[NSMutableArray arrayWithObject:(NSDictionary *)filteredFeatureData] forKey:name];
         }
+      }
     }
     
     return (NSDictionary *)filteredFeatureDictionary;

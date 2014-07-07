@@ -2,18 +2,21 @@
 //  GASAppDelegate.m
 //  Sentinel
 //
-//  Created by Matt Rankin on 22/04/2014.
-//  Copyright (c) 2014 Matt Rankin. All rights reserved.
 //
 
 #import "GASAppDelegate.h"
 #import "GeoserverManager.h"
+#import "GASProximityChecker.h"
 
 @implementation GASAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    // Settings bundle does not copy to user defaults unless user tweaks each value. This is a quick fix.
+    [[NSUserDefaults standardUserDefaults] registerDefaults:[NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"SettingsDefaults" ofType:@"plist"]]];
+    
     return YES;
 }
 							

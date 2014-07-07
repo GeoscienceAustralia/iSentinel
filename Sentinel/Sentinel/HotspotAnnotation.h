@@ -2,19 +2,23 @@
 //  HotspotAnnotation.h
 //  Sentinel
 //
-//  Created by Matt Rankin on 22/04/2014.
 //
 
 #import <Foundation/Foundation.h>
 #import <MapKit/MapKit.h>
 
-@interface HotspotAnnotation : NSObject <MKAnnotation>
+#import "OCGrouping.h"
+
+@interface HotspotAnnotation : NSObject <MKAnnotation, OCGrouping>
 
 - (id)initWithCoordinate:(CLLocationCoordinate2D)coordinate featureType:(NSString *)type;
 
 - (UIImage *)image;
 
++ (UIImage *)imageFromType:(NSString *)type;
+
 @property (strong, nonatomic) NSString *type;
 @property (strong, nonatomic) NSDictionary *metaData;
+@property (copy, nonatomic) NSString *groupTag;
 
 @end

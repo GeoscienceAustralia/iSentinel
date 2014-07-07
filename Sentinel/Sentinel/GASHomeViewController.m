@@ -2,7 +2,6 @@
 //  GASHomeViewController.m
 //  Sentinel
 //
-//  Created by Matt Rankin on 23/04/2014.
 //
 
 #import "GASHomeViewController.h"

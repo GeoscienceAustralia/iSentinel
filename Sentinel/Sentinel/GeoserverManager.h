@@ -2,7 +2,6 @@
 //  GeoserverManager.h
 //  Sentinel
 //
-//  Created by Matt Rankin on 24/04/2014.
 //
 
 #import <Foundation/Foundation.h>
@@ -32,6 +31,7 @@
 // WFS
 - (void)requestFeatures:(NSArray *)featureList
          forBoundingBox:(NSArray *)bbox
+  useSecondaryScheduler:(BOOL)secondaryRequest
                 success:(void (^)(NSDictionary *features))successCallback
                 failure:(void (^)(NSError *error))failureCallback;
 

@@ -2,17 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Version</key>
+	<key>version</key>
 	<string>1.1.1</string>
-	<key>Service</key>
+	<key>service</key>
 	<string>WMS</string>
-	<key>Format</key>
-	<string>PNG</string>
+	<key>format</key>
+	<string>image/png</string>
 	<key>Transparent</key>
 	<string>TRUE</string>
-	<key>Request</key>
+	<key>request</key>
 	<string>GetMap</string>
-	<key>SRS</key>
-	<string>EPSG:3395</string>
 </dict>
 </plist>

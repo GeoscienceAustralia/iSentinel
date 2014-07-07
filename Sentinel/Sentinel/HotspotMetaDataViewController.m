@@ -2,7 +2,6 @@
 //  HotspotMetaDataViewController.m
 //  Sentinel
 //
-//  Created by Matt Rankin on 22/04/2014.
 //
 
 #import "HotspotMetaDataViewController.h"
@@ -49,8 +48,8 @@
         self.labelTempC.text = [NSString stringWithFormat:@"%@", nil];
     }
     
-    self.labelAge.text = [NSString stringWithFormat:@"%@", [_metaData valueForKey:@"age_hours"]];
-    self.labelSource.text = [NSString stringWithFormat:@"%@", [_metaData valueForKey:@"source"]];
+    self.labelAge.text = [NSString stringWithFormat:@"%@", [_metaData valueForKey:@"age"]];
+    self.labelSource.text = [NSString stringWithFormat:@"%@", [_metaData valueForKey:@"satellite"]];
     self.labelConfidence.text = [NSString stringWithFormat:@"%@", [_metaData valueForKey:@"confidence"]];
 }
 

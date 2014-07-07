@@ -2,7 +2,6 @@
 //  HotspotAnnotation.m
 //  Sentinel
 //
-//  Created by Matt Rankin on 22/04/2014.
 //
 
 #import "HotspotAnnotation.h"
@@ -21,6 +20,7 @@
     if (self) {
         _theCoordinate = coordinate;
         _type = type;
+        _groupTag = type;
     }
     return self;
 }
@@ -34,6 +34,13 @@
     NSDictionary *hotspotImages = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"HotspotImages" ofType:@"plist"]];
     
     return [UIImage imageNamed:[hotspotImages valueForKey:self.type]];
+}
+
++ (UIImage *)imageFromType:(NSString *)type
+{
+    NSDictionary *hotspotImages = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"HotspotImages" ofType:@"plist"]];
+    
+    return [UIImage imageNamed:[hotspotImages valueForKey:type]];
 }
 
 

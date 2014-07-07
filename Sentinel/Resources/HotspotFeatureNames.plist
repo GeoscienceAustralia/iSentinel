@@ -2,15 +2,15 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>Most Recent</key>
-	<string>ModisLastPasses-1600</string>
-	<key>0-12 Hours</key>
-	<string>Modis00to12Hours-1601</string>
-	<key>12-24 Hours</key>
-	<string>Modis12to24Hours-1602</string>
-	<key>24-48 Hours</key>
-	<string>Modis24to48Hours-1603</string>
-	<key>48-72 Hours</key>
-	<string>Modis48to72Hours-1604</string>
+	<key>Last 0 - 2 hours</key>
+	<string>filter-0-2</string>
+	<key>Last 2 - 6 hours</key>
+	<string>filter-2-6</string>
+	<key>Last 6 - 24 hours</key>
+	<string>filter-6-24</string>
+	<key>Last 24 - 48 hours</key>
+	<string>filter-24-48</string>
+	<key>Last 48 - 72 hours</key>
+	<string>filter-48-72</string>
 </dict>
 </plist>

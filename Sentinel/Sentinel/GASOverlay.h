@@ -2,7 +2,6 @@
 //  GASOverlay.h
 //  Sentinel
 //
-//  Created by Matt Rankin on 24/04/2014.
 //
 
 #import <Foundation/Foundation.h>

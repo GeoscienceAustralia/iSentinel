@@ -2,7 +2,6 @@
 //  NSURL+RPC.m
 //  Sentinel
 //
-//  Created by Matt Rankin on 23/04/2014.
 //
 
 #import "NSURL+RPC.h"

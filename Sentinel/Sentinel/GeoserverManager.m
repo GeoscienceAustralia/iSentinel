@@ -2,7 +2,6 @@
 //  GeoserverManager.m
 //  Sentinel
 //
-//  Created by Matt Rankin on 24/04/2014.
 //
 
 #import "GeoserverManager.h"
@@ -11,12 +10,18 @@
 #import "AFHTTPRequestOperationManager.h"
 #import "GASHelpers.h"
 #import "GeoserverXMLHelper.h"
+#import "GASErrorHandler.h"
+#import "CachingAFSNetworkingOperation.h"
 
 @interface GeoserverManager ()
 
 @property (strong, nonatomic) NSDictionary *geoServerURLs;
-@property (strong, nonatomic) AFHTTPRequestOperationManager *WFSRequestManager;
-@property (strong, nonatomic) AFHTTPRequestOperationManager *WMSRequestManager;
+
+// The primary manager handles the frequent requests caused by map interaction
+// The secondary manager handles scheduled background requests
+@property (strong, nonatomic) CachingAFSNetworkingOperation *WFSRequestManagerPrimary;
+@property (strong, nonatomic) CachingAFSNetworkingOperation *WFSRequestManagerSecondary;
+@property (strong, nonatomic) CachingAFSNetworkingOperation *WMSRequestManager;
 @property (strong, nonatomic) NSTimer *cacheExpiryTimer;
 
 @end
@@ -31,15 +36,21 @@ static GeoserverManager *sharedInstance;
     return sharedInstance;
 }
 
-- (AFHTTPRequestOperationManager *)WFSRequestManager
+- (AFHTTPRequestOperationManager *)WFSRequestManagerPrimary
 {
-    if (!_WFSRequestManager) _WFSRequestManager = [AFHTTPRequestOperationManager manager];
-    return _WFSRequestManager;
+    if (!_WFSRequestManagerPrimary) _WFSRequestManagerPrimary = [CachingAFSNetworkingOperation manager];
+    return _WFSRequestManagerPrimary;
+}
+
+- (AFHTTPRequestOperationManager *)WFSRequestManagerSecondary
+{
+    if (!_WFSRequestManagerSecondary) _WFSRequestManagerSecondary = [CachingAFSNetworkingOperation manager];
+    return _WFSRequestManagerSecondary;
 }
 
 - (AFHTTPRequestOperationManager *)WMSRequestManager
 {
-    if (!_WMSRequestManager) _WMSRequestManager = [AFHTTPRequestOperationManager manager];
+    if (!_WMSRequestManager) _WMSRequestManager = [CachingAFSNetworkingOperation manager];
     _WMSRequestManager.operationQueue.maxConcurrentOperationCount = 1;
     return _WMSRequestManager;
 }
@@ -82,6 +93,11 @@ static GeoserverManager *sharedInstance;
 
 - (void)resetCache
 {
+    if ([[[NSUserDefaults standardUserDefaults] valueForKey:@"tile_cache"] boolValue]) {
+        self.emptyCacheLabel.hidden = NO;
+        self.emptyCacheSpinner.hidden = NO;
+    }
+    
     NSFileManager *fileManager = [NSFileManager defaultManager];
     NSString *cachePath = [GASHelpers cacheDirectory];
     
@@ -90,7 +106,7 @@ static GeoserverManager *sharedInstance;
         self.emptyCacheLabel.alpha = 1.0;
     }];
     
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
     
         NSError *error;
         for (NSString *file in [fileManager contentsOfDirectoryAtPath:cachePath error:&error]) {
@@ -131,12 +147,12 @@ static GeoserverManager *sharedInstance;
 
 - (void)cancelAllRequests
 {
-    [self.WFSRequestManager.operationQueue cancelAllOperations];
+    [self.WFSRequestManagerPrimary.operationQueue cancelAllOperations];
 }
 
 - (BOOL)hasRequestsPending
 {
-    return [self.WFSRequestManager.operationQueue operationCount] > 0;
+    return [self.WFSRequestManagerPrimary.operationQueue operationCount] > 0;
 }
 
 
@@ -184,38 +200,6 @@ static GeoserverManager *sharedInstance;
     NSLog(@"WMS: %@", wmsRequestURL);
     
     //
-    // The following works successfully. It is not possible to cancel requests, because they are
-    // hidden in NSData, but the use of tiling means this shouldn't be an issue except for very slow
-    // connections accessing many layers at once (thus producing larger pngs).
-    //
-    // See below for AFNetworking solution.
-    //
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-
-        NSData *imageData = [NSData dataWithContentsOfURL:wmsRequestURL];
-        
-        if (imageData) {
-            
-            UIImage *image = [UIImage imageWithData:imageData];
-            [UIImagePNGRepresentation(image) writeToFile:[GASHelpers filePathForTileWithBoundingBox:bbox] atomically:YES];
-            
-            dispatch_async(dispatch_get_main_queue(), ^{
-                successCallback(image);
-            });
-            
-        } else {
-            
-            dispatch_async(dispatch_get_main_queue(), ^{
-                failureCallback();
-            });
-            
-        }
-        
-    });
-    
-    return;
-    
-    //
     // This solution provides for the cancelling of requests, but there is something about these AFHTTPRequestOperationManagers
     // that means they crash occasionally (they are new in AFNetworking 2.0). It is left here for future reference.
     //
@@ -250,12 +234,21 @@ static GeoserverManager *sharedInstance;
 //
 - (void)requestFeatures:(NSArray *)featureList
          forBoundingBox:(NSArray *)bbox
+  useSecondaryScheduler:(BOOL)secondaryRequest
                 success:(void (^)(NSDictionary *features))successCallback
                 failure:(void (^)(NSError *error))failureCallback
 {
     NSMutableDictionary *parameterList = [NSMutableDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"DefaultsWFS" ofType:@"plist"]];
-    [parameterList setValue:[NSString commaDelimitedListWithArray:featureList] forKey:@"typeName"];
-    [parameterList setValue:[NSString commaDelimitedListWithArray:bbox] forKey:@"bbox"];
+    
+    NSPredicate *isFeaturePredicate = [NSPredicate predicateWithFormat:@"not SELF beginswith[cd] 'filter-'"];
+    NSPredicate *isFilterPredicate = [NSPredicate predicateWithFormat:@"SELF beginswith[cd] 'filter-'"];
+    NSArray *filterFeatures = [featureList filteredArrayUsingPredicate:isFilterPredicate];
+    NSArray *features = [featureList filteredArrayUsingPredicate:isFeaturePredicate];
+    
+    [parameterList setValue:[NSString commaDelimitedListWithArray:features] forKey:@"typeName"];
+    if (bbox) {
+        [parameterList setValue:[NSString commaDelimitedListWithArray:bbox] forKey:@"bbox"];
+    }
     
     NSURL *wfsRequestURL = [[NSURL alloc] initWithServer:[self.geoServerURLs valueForKey:@"WFS"]
                                            parameters:parameterList];
@@ -264,9 +257,9 @@ static GeoserverManager *sharedInstance;
     
     AFHTTPResponseSerializer *responseSerializer = [AFHTTPResponseSerializer serializer];
     responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/xml", nil];
-    self.WFSRequestManager.responseSerializer = responseSerializer;
     
-    [self.WFSRequestManager GET:[wfsRequestURL description] parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    
+    void (^successBlock)(AFHTTPRequestOperation*, id) = ^(AFHTTPRequestOperation *operation, id responseObject) {
         
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
             
@@ -279,15 +272,16 @@ static GeoserverManager *sharedInstance;
                 });
             } else {
                 NSDictionary *dict = [GeoserverXMLHelper dictionaryWithTBXMLElement:tbxml.rootXMLElement];
-                NSDictionary *filteredFeatureList = [GeoserverXMLHelper buildFilteredFeatureList:dict];
+                NSDictionary *filteredFeatureList = [GeoserverXMLHelper buildFilteredFeatureList:dict filters:filterFeatures];
                 dispatch_async(dispatch_get_main_queue(), ^{
                     successCallback(filteredFeatureList);
                 });
             }
             
         });
-
-    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        
+    };
+    void (^failureBlock)(AFHTTPRequestOperation*, NSError*) = ^(AFHTTPRequestOperation *operation, NSError *error) {
         
         if (![operation isCancelled]) {
             NSLog(@"Error: %@", error);
@@ -296,7 +290,21 @@ static GeoserverManager *sharedInstance;
         failureCallback(nil);
         NSLog(@"Feature fetch cancelled");
         
-    }];
+    };
+    
+    if (secondaryRequest) {
+        self.WFSRequestManagerSecondary.responseSerializer = responseSerializer;
+        [self.WFSRequestManagerSecondary GET:[wfsRequestURL description]
+                                  parameters:nil
+                                     success:successBlock
+                                     failure:failureBlock];
+    } else {
+        self.WFSRequestManagerPrimary.responseSerializer = responseSerializer;
+        [self.WFSRequestManagerPrimary GET:[wfsRequestURL description]
+                                parameters:nil
+                                   success:successBlock
+                                   failure:failureBlock];
+    }
     
     return;
 }

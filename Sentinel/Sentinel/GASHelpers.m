@@ -2,7 +2,6 @@
 //  GASHelpers.m
 //  Sentinel
 //
-//  Created by Matt Rankin on 25/04/2014.
 //
 
 #import "GASHelpers.h"
@@ -10,8 +9,11 @@
 
 @implementation GASHelpers
 
+
+#pragma mark - Bounding Box Calculations -
 //
-// TODO: The maps don't line up. Geoscience doesn't seem to be able to spit out a standard Mercator projection.
+// TODO: The maps don't line up. Geoscience appears to be using more than one type of projection which makes life harder
+// for prototype.
 //
 + (NSArray *)boundingBoxWithMapRect:(MKMapRect)mapRect
 {
@@ -25,8 +27,18 @@
     return @[@(region.center.longitude - region.span.longitudeDelta / 2),
              @(region.center.latitude - region.span.latitudeDelta / 2),
              @(region.center.longitude + region.span.longitudeDelta / 2),
-             @(region.center.latitude + region.span.latitudeDelta / 2)];
+             @(region.center.latitude + region.span.latitudeDelta / 2), @("EPSG:4326")];
 }
+
++ (NSArray *)boundingBoxFromLocation:(CLLocation *)location withRadius:(float)radius
+{
+    CLLocationCoordinate2D centre = CLLocationCoordinate2DMake(location.coordinate.latitude, location.coordinate.longitude);
+    MKCoordinateRegion enclosingRegion = MKCoordinateRegionMakeWithDistance(centre, radius * 2, radius * 2);
+    return [GASHelpers boundingBoxWithRegion:enclosingRegion];
+}
+
+
+#pragma mark - Caching Strings -
 
 + (NSString *)md5Hash:(NSString *)stringData {
     NSData *data = [stringData dataUsingEncoding:NSUTF8StringEncoding];

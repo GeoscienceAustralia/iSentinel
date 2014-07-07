@@ -2,7 +2,6 @@
 //  main.m
 //  Sentinel
 //
-//  Created by Matt Rankin on 22/04/2014.
 //
 
 #import <UIKit/UIKit.h>

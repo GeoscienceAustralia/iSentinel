@@ -2,7 +2,6 @@
 //  GeoserverXMLHelper.h
 //  Sentinel
 //
-//  Created by Matt Rankin on 28/04/2014.
 //
 
 #import <Foundation/Foundation.h>
@@ -10,7 +9,9 @@
 
 @interface GeoserverXMLHelper : NSObject
 
-+ (NSDictionary *)buildFilteredFeatureList:(NSDictionary *)featureDictionary;
++ (NSDictionary *)buildFilteredFeatureList:(NSDictionary *)featureDictionary
+                                   filters:(NSArray *)filterFeatures;
+
 + (NSDictionary *)dictionaryWithTBXMLElement:(TBXMLElement *)element;
 
 @end
