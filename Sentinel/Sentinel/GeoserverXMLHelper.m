@@ -43,11 +43,18 @@
     }
     
     for (NSString *featureName in [featureList allKeys]) {
-      for (NSDictionary *featureData in [featureList valueForKey:featureName]) {
+      // In iOS7.0 on an iPad 3(HD) this casts incorrectly inline. Splitting
+      // appears to resolve the crash
+      NSArray *featureDatas = [featureList valueForKey:featureName];
+      for (NSMutableDictionary *featureData in featureDatas) {
         NSString *featureType = [featureName stringByReplacingOccurrencesOfString:@"sentinel:" withString:@""];
         NSMutableDictionary *filteredFeatureData = [NSMutableDictionary dictionary];
         for (NSString *featureDataTag in [featureDataTags allKeys]) {
-            [filteredFeatureData setValue:[featureData valueForKey:[featureDataTags valueForKey:featureDataTag]] forKey:featureDataTag];
+            NSString * newKey = [featureDataTags valueForKey:featureDataTag];
+            NSString * keyValue = [featureData valueForKey:newKey];
+            if (keyValue) {
+                [filteredFeatureData setValue:keyValue forKey:featureDataTag];
+            }
         }
         
         // Default to the feature we are in

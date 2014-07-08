@@ -25,7 +25,6 @@
 
 #define LOWER_THAN_IOS8 1047.25
 #define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
-
 - (id)init
 {
     self = [super init];
