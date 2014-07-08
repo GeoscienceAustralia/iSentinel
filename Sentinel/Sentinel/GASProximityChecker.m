@@ -24,6 +24,7 @@
 @implementation GASProximityChecker
 
 #define LOWER_THAN_IOS8 1047.25
+#define SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(v)  ([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] != NSOrderedAscending)
 
 - (id)init
 {
@@ -42,7 +43,9 @@
         self.locationManager.distanceFilter = 100.0;
         self.locationManager.desiredAccuracy = kCLLocationAccuracyBest;
 #ifdef __IPHONE_8_0
-        [self.locationManager requestAlwaysAuthorization];
+        if (SYSTEM_VERSION_GREATER_THAN_OR_EQUAL_TO(@"8.0")) {
+           [self.locationManager requestAlwaysAuthorization];
+        }
 #endif
         [self.locationManager startUpdatingLocation];        
     }
