@@ -7,7 +7,7 @@
 	<key>Layers</key>
 	<array/>
 	<key>DetailThreshold</key>
-	<string>50</string>
+	<string>200</string>
 	<key>ViewDimension</key>
 	<string>4500000</string>
 	<key>Latitude</key>

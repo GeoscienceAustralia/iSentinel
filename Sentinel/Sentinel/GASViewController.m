@@ -162,7 +162,7 @@ CFAbsoluteTime lastAnnotationUpdate = 0;
     // TODO: Make this a true bounding box/sliding window with buffer like all the greats.
     // Provided the degress of bounding are small enough the WFS can respond fast enough.
     // This would also require the WMS requests to utilise the CQL_FILTER to enable featuers to be swapped out in the overlay
-    if ((now - lastAnnotationUpdate > (300 * 1000)) || self.mapView.allAnnotations.count == 0) {
+    if ((now - lastAnnotationUpdate > (300 * 1000)) || self.mapView.annotations.count == 0) {
         [[GeoserverManager sharedManager] requestFeatures:allFeatureTypes
                                        forBoundingBox:nil
                                 useSecondaryScheduler:NO
