@@ -201,7 +201,7 @@ static GeoserverManager *sharedInstance;
     
     //
     // This solution provides for the cancelling of requests, but there is something about these AFHTTPRequestOperationManagers
-    // that means they crash occasionally (they are new in AFNetworking 2.0). It is left here for future reference.
+    // that means they crash occasionally (they are new in AFNetworking 2.0 and are not thread/resource safe). It is left here for future reference.
     //
     self.WMSRequestManager.responseSerializer = [AFImageResponseSerializer serializer];
     

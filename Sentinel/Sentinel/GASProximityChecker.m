@@ -242,20 +242,7 @@
         
     }
     else {
-        NSUInteger proximity = [[[NSUserDefaults standardUserDefaults] valueForKey:@"proximity_threshold"] integerValue];
-        if (proximity == 0) {
-            proximity = 50;
-        }
-        
-        NSString *proximityString = [NSString stringWithFormat:@"%.2dkm", proximity];
-
-        UIAlertView *newHotspotAlert = [[UIAlertView alloc] initWithTitle:@"Hotspot Alert"
-                                                                  message:[NSString stringWithFormat:@"There are presently no hotspots within %@ of your location", proximityString]
-                                                                 delegate:self
-                                                        cancelButtonTitle:@"Ignore"
-                                                        otherButtonTitles:nil];
-        
-        [newHotspotAlert show];
+        // Do something if no nearby hotspots.
     }
 }
 
