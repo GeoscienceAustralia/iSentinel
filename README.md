@@ -1,5 +1,6 @@
 iSentinel
 =========
+iSentinel is a Sentinel mobile phone app that is currently not being used or in development.
 
 License
 -------
