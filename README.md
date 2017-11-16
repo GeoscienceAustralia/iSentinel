@@ -6,4 +6,9 @@ License
 -------
 This code is licensed under a BSD 3-clause license. See the [license deed](LICENSE).
 
-
+Contacts
+--------
+**Scientific Computing Section**  
+*ICT Innovation & Services*  
+Geoscience Australia  
+<clientservices@ga.gov.au>  
